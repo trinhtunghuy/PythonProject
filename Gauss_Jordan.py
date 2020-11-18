@@ -22,8 +22,7 @@ def timtrutoidai():
         if row in index_row:  # Bỏ qua vì hàng này đã có phần tử giải
             continue
         max_row = np.amax(abs(matrix[row, 0:(len(matrix[0]))]))  # Tìm phần tử lớn nhất trong hàng row
-        if (1 in matrix[row, 0:(len(matrix[0]))]) or (
-                -1 in matrix[row, 0:(len(matrix[0]))]):  # Nếu có 1 hoặc -1 trong hàng row => chọn làm phần tử giải
+        if (1 in matrix[row, 0:(len(matrix[0]))]) or (-1 in matrix[row, 0:(len(matrix[0]))]):  # Nếu có 1 hoặc -1 trong hàng row => chọn làm phần tử giải
             maxvalue = 1
             hang = row
             index_temp = np.where(abs(matrix[row, 0:(len(matrix[0]))]) == maxvalue)
